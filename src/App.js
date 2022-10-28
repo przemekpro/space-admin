@@ -1,6 +1,7 @@
 import './app.scss'
 import Sidebar from './components/sidebar/Sidebar';
 import Navbar from './components/navbar/Navbar';
+import Home from './pages/home/Home'
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       </aside>
       <div className="app-wrapper">
         <Navbar />
+        <Home />
       </div>
     </div>
   );

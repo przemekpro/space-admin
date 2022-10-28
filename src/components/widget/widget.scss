@@ -1,0 +1,52 @@
+.widget {
+    display: flex;
+    flex: 1;
+    padding: 1em;
+    justify-content: space-between;
+    border-radius: 10px;
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+
+    &__left,
+    &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        color:rgba(128, 128, 128, 0.758);
+        font-weight: 600;
+        
+    }
+
+    &__counter {
+        font-size: 3rem;
+        margin: 0.2em 0;
+        font-weight: 300;
+    }
+
+    &__link {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    &__percentage {
+        color: rgb(0, 128, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    &__icon {
+        color: rgb(246, 158, 5);
+        background-color: rgba(246, 158, 5, 0.354);
+        border-radius: 10px;
+        padding: 0.3em;
+        display: flex;
+        justify-content: center;
+    }
+}
