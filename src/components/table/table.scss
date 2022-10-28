@@ -1,0 +1,46 @@
+.transactions {
+    padding: 1em;
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    border-radius: 10px;
+
+    &__container {
+        border: 0.5px solid rgba(128, 128, 128, 0.25);
+        border-radius: 10px;
+    }
+
+    &__title {
+        color: gray;
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+
+    &__pending,
+    &__approved {
+        padding: 0.5em;
+        border-radius: 20px;
+        width: fit-content;
+        letter-spacing: 0.5px;
+    }
+
+    &__pending {
+        color: rgb(255, 166, 0);
+        background-color: rgba(255, 166, 0, 0.15);
+        
+    }
+
+    &__approved {
+        color: rgb(0, 128, 0);
+        background-color: rgba(0, 128, 0, 0.15);
+    }
+
+    &__product {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__image {
+        width: 30px;
+    }
+}

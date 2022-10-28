@@ -2,6 +2,7 @@ import './home.scss'
 import Widget from '../../components/widget/Widget'
 import Revenue from '../../components/revenue/Revenue'
 import Chart from '../../components/chart/Chart'
+import Transactions from '../../components/table/Table'
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
                 <Revenue />
                 <Chart />
             </div>
+            <Transactions />
         </div>
     )
 }
