@@ -1,0 +1,143 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    border-right: 1px solid rgba(128, 128, 128, 0.238);
+
+    &__divider {
+        height: 0;
+        width: 100%;
+        border: 0.5px solid rgba(128, 128, 128, 0.238);
+    }
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    gap: 5px;
+    padding: 0 2em;
+
+    &__text {
+        font-size: 1.8rem;
+        letter-spacing: 0.5px;
+        font-weight: 600;
+    }
+
+    &__icon,
+    &__text--highlight {
+        background-color: #CA4246;
+         background-image: linear-gradient(
+              45deg,
+              #CA4246 16.666%, 
+              #E16541 16.666%, 
+              #E16541 33.333%, 
+              #F18F43 33.333%, 
+              #F18F43 50%, 
+              #8B9862 50%, 
+              #8B9862 66.666%, 
+              #476098 66.666%, 
+              #476098 83.333%, 
+              #A7489B 83.333%);
+        background-size: 100%;
+        background-repeat: repeat;
+      }
+      
+      &__text--highlight {
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
+
+      }
+      
+      &__icon {
+        color: white;
+        border-radius: 5px;
+        box-sizing: content-box;
+        padding: 0.1em 0.2em;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+      
+      &__text--highlight:hover {
+          animation: rainbow-text-simple-animation 0.5s ease-in forwards;
+      }
+
+      &__icon:hover {
+        animation: float 1.5s ease-in-out infinite;
+      }
+      
+        
+    @keyframes rainbow-text-simple-animation-rev {
+        0% {
+            background-size: 650%;
+        }
+        40% {
+            background-size: 650%;
+        }
+        100% {
+            background-size: 100%;
+        }
+    }
+    
+    @keyframes rainbow-text-simple-animation {
+        0% {
+            background-size: 100%;
+        }
+        80% {
+            background-size: 650%;
+        }
+        100% {
+            background-size: 650%;
+        }
+    }
+
+    @keyframes float {
+        0% {
+            transform: translatey(0px);
+        }
+        50% {
+            transform: translatey(-5px);
+        }
+        100% {
+            transform: translatey(0px);
+        }
+    }
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    
+    &__title {
+        font-size: 0.9rem;
+        color: rgba(128, 128, 128, 0.758);
+        font-weight: 500;
+        letter-spacing: 0.8px;
+        margin-top: 2em;
+    }
+
+    &__list {
+        list-style: none;
+        margin: 1em;
+        padding: 0;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: rgb(86, 85, 85);
+        padding: 1em;
+        cursor: pointer;
+        
+        &:hover {
+            background-color: rgba(58, 150, 249, 0.108);
+            border-radius: 20px;
+        }
+    }
+}
