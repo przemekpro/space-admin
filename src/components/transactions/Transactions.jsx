@@ -1,17 +1,12 @@
-import './table.scss'
+import './transactions.scss'
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import Box from '@mui/material/Box';
 
-function createData(name, calories, fat, carbs, protein) {
-    return { name, calories, fat, carbs, protein };
-  }
 
-const rows = [
+const data = [
     {id: 1,
     order: 45345,
     image: 'https://files.refurbed.com/ii/iphone-13-pro-max-1631712293.jpg',
@@ -21,8 +16,8 @@ const rows = [
     amount: 999,
     payment: 'Online',
     status: 'Approved'
-},
-{id: 2,
+    },
+    {id: 2,
     order: 44345,
     image: 'https://files.refurbed.com/ii/iphone-13-pro-max-1631712293.jpg',
     product: 'iPhone 13 Pro Max',
@@ -31,8 +26,8 @@ const rows = [
     amount: 999,
     payment: 'Cash on delivery',
     status: 'Approved'
-},
-{id: 3,
+    },
+    {id: 3,
     order: 45655,
     image: 'https://files.refurbed.com/ii/iphone-13-pro-max-1631712293.jpg',
     product: 'iPhone 13 Pro Max',
@@ -41,8 +36,8 @@ const rows = [
     amount: 999,
     payment: 'Online',
     status: 'Pending'
-},
-{id: 4,
+    },
+    {id: 4,
     order: 45346,
     image: 'https://a.allegroimg.com/s1024/0cc2e7/7c2d8ade4f0db2b10f500a2aa31a',
     product: 'MacBook Pro 16',
@@ -51,8 +46,8 @@ const rows = [
     amount: 1999,
     payment: 'Cash on delivery',
     status: 'Approved'
-},
-{id: 5,
+    },
+    {id: 5,
     order: 45333,
     image: 'https://files.refurbed.com/ii/iphone-13-pro-max-1631712293.jpg',
     product: 'iPhone 13 Pro Max',
@@ -64,6 +59,7 @@ const rows = [
 },
 ]
 
+
 export default function Transactions() {
     return (
         <div className="transactions">
@@ -73,32 +69,32 @@ export default function Transactions() {
                     <TableHead>
                     <TableRow>
                         <TableCell>Order Number</TableCell>
-                        <TableCell >Product</TableCell>
-                        <TableCell >Customer</TableCell>
-                        <TableCell >Date</TableCell>
-                        <TableCell >Amount</TableCell>
-                        <TableCell >Payment Method</TableCell>
-                        <TableCell >Status</TableCell>
+                        <TableCell>Product</TableCell>
+                        <TableCell>Customer</TableCell>
+                        <TableCell>Date</TableCell>
+                        <TableCell>Amount</TableCell>
+                        <TableCell>Payment Method</TableCell>
+                        <TableCell>Status</TableCell>
                     </TableRow>
                     </TableHead>
                     <TableBody>
-                    {rows.map((row) => (
-                        <TableRow key={row.id} sx={{'&:last-child td, &:last-child th': { border: 0 }}}
+                    {data.map(data => (
+                        <TableRow key={data.id} sx={{'&:last-child td, &:last-child th': { border: 0 }}}
                         >
                         <TableCell component="th" scope="row">
-                            {row.order}
+                            {data.order}
                         </TableCell>
                         <TableCell >
                             <div className="transactions__product">
-                                <img className="transactions__image" src={row.image} alt="product image"/>
-                                {row.product}
+                                <img className="transactions__image" src={data.image} alt="product"/>
+                                {data.product}
                             </div>
                         </TableCell>
-                        <TableCell >{row.customer}</TableCell>
-                        <TableCell >{row.date}</TableCell>
-                        <TableCell >{`$${row.amount}`}</TableCell>
-                        <TableCell >{row.payment}</TableCell>
-                        <TableCell ><p className={`transactions__${(row.status.toLowerCase())}`}>{row.status}</p></TableCell>
+                        <TableCell >{data.customer}</TableCell>
+                        <TableCell >{data.date}</TableCell>
+                        <TableCell >{data.amount && `$${data.amount}`}</TableCell>
+                        <TableCell >{data.payment}</TableCell>
+                        <TableCell ><p className={`transactions__${(data.status.toLowerCase())}`}>{data.status}</p></TableCell>
                         </TableRow>
                     ))}
                     </TableBody>

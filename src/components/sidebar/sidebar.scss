@@ -3,6 +3,8 @@
     flex-direction: column;
     min-height: 100vh;
     border-right: 1px solid rgba(128, 128, 128, 0.238);
+    position: fixed;
+    width: 15%;
 
     &__divider {
         margin: 0;
@@ -25,6 +27,7 @@
         font-size: 1.8rem;
         letter-spacing: 0.5px;
         font-weight: 600;
+        color: darkblue;
     }
 
     &__icon,

@@ -42,7 +42,7 @@ export default function Chart() {
             type="monotone"
             dataKey="Total"
             stroke="#239fde"
-            fillOpacity={1}
+            fillOpacity={0.5}
             fill="url(#total)"
           />
         </AreaChart>

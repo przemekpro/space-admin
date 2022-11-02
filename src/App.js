@@ -2,6 +2,8 @@ import './app.scss'
 import Sidebar from './components/sidebar/Sidebar';
 import Navbar from './components/navbar/Navbar';
 import Home from './pages/home/Home'
+import Users from './components/users/Users'
+import { Routes, Route } from "react-router-dom";
 
 
 function App() {
@@ -12,7 +14,12 @@ function App() {
       </aside>
       <div className="app-wrapper">
         <Navbar />
-        <Home />
+        <div className="app-content">
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/users' element={<Users />} />
+        </Routes>
+        </div>
       </div>
     </div>
   );
