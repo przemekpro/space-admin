@@ -5,8 +5,6 @@ import Chart from '../../components/chart/Chart'
 import Transactions from '../../components/transactions/Transactions'
 
 
-
-
 export default function Home() {
     return (
         <div className="home">
