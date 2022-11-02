@@ -1,0 +1,36 @@
+.login {
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__input {
+        width: 300px;
+        font-size: 1rem;
+        padding: 0.5em;
+        border-radius: 5px;
+        border: 1px solid rgba(128, 128, 128, 0.2);
+        text-indent: 5px;
+    }
+
+    &__button {
+        background-color: green;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 0.5em;
+        width: 100%;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    &__error-msg {
+        color: red;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+}
