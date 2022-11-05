@@ -2,6 +2,8 @@ import { Settings, NotificationsNone } from '@mui/icons-material'
 import './navbar.scss'
 
 export default function Navbar() {
+
+    
     return (
         <header className="navbar-header">
             <nav className="navbar">

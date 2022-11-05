@@ -1,35 +1,34 @@
 import './app.scss'
-import Sidebar from './components/sidebar/Sidebar';
-import Navbar from './components/navbar/Navbar';
 import Home from './pages/home/Home'
 import Users from './components/users/Users'
-import { Routes, Route, Navigate } from "react-router-dom";
 import Login from './pages/login/login';
+import Register from './pages/register/register';
+import { Routes, Route } from "react-router-dom";
+import { useSelector } from 'react-redux'
+import { useEffect } from 'react';
+import RequireAuth from './utlis/RequireAuth';
+
 
 
 function App() {
 
-  const loggedIn = true
+  const {currentUser} = useSelector(state => state.auth)
+    
 
-  function RequireAuth(props) {
-    return loggedIn ? props.children : <Navigate to='/login' />
-  }
+  useEffect(() => {
+    localStorage.setItem('user', JSON.stringify(currentUser))
+  }, [currentUser])
 
   return (
     <div className="app">
-      <aside className="app-sidebar">
-        <Sidebar />
-      </aside>
-      <div className="app-wrapper">
-        <Navbar />
-        <div className="app-content">
-          <Routes>
-            <Route path='/' element={<RequireAuth><Home /></RequireAuth>} />
-            <Route path='/users' element={<RequireAuth><Users /></RequireAuth>} />
-            <Route path='/login' element={<Login />} />
-          </Routes>
-        </div>
-      </div>
+      <Routes>
+        <Route path='/login' element={<Login />} />
+        <Route path='/register' element={<Register />} />
+        <Route element={<RequireAuth />} >
+              <Route path='/' element={<Home />} />
+              <Route path='/users' element={<Users />} />
+        </Route>
+      </Routes>
     </div>
   );
 }

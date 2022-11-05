@@ -1,5 +1,17 @@
 .app {
-    display: flex;
+
+    &__logged-in-wrapper {
+        width: 100%;
+        display: flex;
+    }
+
+    &__login-wrapper {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     &-sidebar {
         display: flex;
