@@ -7,8 +7,6 @@ import { auth } from '../../firebase';
 import { signIn } from '../../redux/authSlice';
 
 
-
-
 export default function Sidebar() {
 
     const dispatch = useDispatch()
@@ -51,19 +49,25 @@ export default function Sidebar() {
                                     <span>Users</span>
                             </li>
                         </Link>
-                        <li className="nav__item">
-                            <Store />
-                            <span>Products</span>
-                        </li>
-                        <li className="nav__item">
-                            <ShoppingCart />
-                            <span>Orders</span>
-                        </li>
+                        <Link to='/products'>
+                            <li className="nav__item">
+                                <Store />
+                                <span>Products</span>
+                            </li>
+                        </Link>
+                        <Link to='/orders'>
+                            <li className="nav__item">
+                                <ShoppingCart />
+                                <span>Orders</span>
+                            </li>
+                        </Link>
                         <p className="nav__title">USER</p>
-                        <li className="nav__item">
-                            <Person />
-                            <span>Profile</span>
-                        </li>
+                        <Link to='/profile'>
+                            <li className="nav__item">
+                                <Person />
+                                <span>Profile</span>
+                            </li>
+                        </Link>
                         <li className="nav__item" onClick={handleLogout}>
                             <Logout />
                             <span>Logout</span>

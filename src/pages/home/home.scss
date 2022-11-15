@@ -9,10 +9,12 @@
     &__widgets {
         display: flex;
         gap: 20px;
+        min-width: 1000px;
     }
 
     &__charts {
         display: flex;
         gap: 40px;
+        min-width: 1000px;
     }
 }

@@ -127,15 +127,24 @@
     }
 
     &__button {
-        background-color: green;
+        background-color: rgb(0, 128, 0);
         color: white;
         border: none;
         border-radius: 5px;
         padding: 1em;
-        margin-top: .3em;
         width: 100%;
         font-size: 1rem;
         cursor: pointer;
+        transition: 150ms;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+        &:hover {
+            background-color: rgb(3, 161, 3);
+            transition: 150ms;
+        }
     }
 
     &__signup-info {

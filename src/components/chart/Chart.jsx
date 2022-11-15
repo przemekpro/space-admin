@@ -21,9 +21,8 @@ export default function Chart() {
   return (
     <div className="chart">
       <div className="chart__title">Last 6 months (spending)</div>
-      <ResponsiveContainer width="100%">
+      <ResponsiveContainer width="99%">
         <AreaChart
-          width={730}
           height={250}
           data={data}
           margin={{ top: 10, right: 30, left: 0, bottom: 0 }}

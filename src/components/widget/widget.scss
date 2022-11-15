@@ -31,22 +31,46 @@
     &__link {
         text-decoration: underline;
         cursor: pointer;
+        color: #000;
     }
 
     &__percentage {
-        color: rgb(0, 128, 0);
         display: flex;
         justify-content: center;
         align-items: center;
 
+        &--positive {
+            color: rgb(0, 128, 0);
+        }
+
+        &--negative {
+            color: rgb(215, 20, 20);
+        }
     }
+    
 
     &__icon {
-        color: rgb(246, 158, 5);
-        background-color: rgba(246, 158, 5, 0.354);
         border-radius: 10px;
-        padding: 0.3em;
+        padding: .5em;
         display: flex;
         justify-content: center;
+        width: min-content;
+        align-self: flex-end;
+        
+
+        &--users {
+            color: rgb(246, 158, 5);
+            background-color: rgba(246, 158, 5, 0.354);
+        }
+
+        &--products {
+            color: rgb(37, 149, 26);
+            background-color: rgba(37, 149, 26, 0.354);
+        }
+
+        &--orders {
+            color: rgb(35, 140, 238);
+            background-color: rgba(35, 140, 238, 0.354);
+        }
     }
 }

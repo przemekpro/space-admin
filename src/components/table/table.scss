@@ -1,0 +1,202 @@
+.table {
+    padding: 1em;
+    margin: 2em;
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    border-radius: 10px;
+    width: 100%;
+    min-width: 1000px;
+
+    &__container {
+        border: 0.5px solid rgba(128, 128, 128, 0.25);
+        border-radius: 10px;
+        margin: 2em 0;
+    }
+
+    &__bar {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__form {
+        display: flex;
+        border: 1px solid rgba(128, 128, 128, 0.2);
+        border-radius: 5px;
+        margin: 2em 0;
+        width: 400px;
+    }
+
+    &__add-new {
+        background-color: rgb(32, 174, 32);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: .7em 1.5em;
+        font-size: .9rem;
+        cursor: pointer;
+        letter-spacing: 0.2px;
+        font-weight: 300;
+        transition: 150ms;
+
+
+        &:hover {
+            transition: 150ms;
+            background-color: rgb(3, 161, 3);
+        }
+    }
+
+    &__search {
+        width: 100%;
+        border: none;
+        font-size: 1rem;
+        padding: 0.5em;
+        text-indent: 10px;
+        outline: none;
+
+
+        &-button {
+            background-color: rgb(32, 174, 32);
+            border-radius: 0 5px 5px 0;
+            color: white;
+            border: none;
+            padding: 0 1em;
+            font-size: 0.9rem;
+            cursor: pointer;
+            letter-spacing: 0.2px;
+            font-weight: 300;
+            margin: -1px;
+            transition: 150ms;
+
+
+            &:hover {
+                transition: 150ms;
+                background-color: rgb(3, 161, 3);
+            }
+        }
+    }
+
+
+    &__title {
+        color: gray;
+        font-weight: 500;
+        font-size: 1.5rem;
+        text-transform: capitalize;
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+        &-delete,
+        &-edit {
+            background-color: transparent;
+            border: none;
+        }
+    }
+
+    &__view-icon {
+        color: rgb(251, 168, 15);
+        cursor: pointer;
+    }
+
+    &__delete-icon {
+        color: rgb(247, 28, 28);
+        cursor: pointer;
+    }
+
+    &__view-icon:hover,
+    &__delete-icon:hover {
+        scale: 1.05;
+    }
+
+    &__info {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        padding: 2em;
+        color: rgb(128, 128, 128);
+    }
+
+    &__sort-btn {
+        display: flex;
+        text-align: center;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0 auto;
+        padding: .5em;
+        background-color: transparent;
+        border: none;
+        font-size: .875rem;
+        cursor: pointer;
+        color: rgb(86, 85, 85);
+
+        &:hover {
+            background-color: rgba(211, 211, 211, 0.15);
+            transition: 150ms;
+            border-radius: 10px;
+        }
+    }
+
+    &__left-column {
+        margin: 0;
+    }
+
+}
+
+.delete {
+
+    &__wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 3em;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        outline: 0;
+    }
+
+    &__actions {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+    }
+
+    &__btn {
+        background-color: rgb(255, 0, 0);
+        padding: .9em 2.5em;
+        font-size: 0.9rem;
+        color: #fff;
+        letter-spacing: 0.2px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 150ms;
+
+
+        &:hover {
+            transition: 150ms;
+            background-color: rgb(210, 0, 0);
+        }
+
+    }
+    
+    &-cancel {
+        background-color: rgb(128, 128, 128);
+
+
+        &:hover {
+            transition: 150ms;
+            background-color: rgb(90, 90, 90);
+        }
+    }
+
+}

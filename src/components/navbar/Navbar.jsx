@@ -1,7 +1,13 @@
-import { Settings, NotificationsNone } from '@mui/icons-material'
+import { Settings, AccountCircle } from '@mui/icons-material'
+import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 import './navbar.scss'
 
 export default function Navbar() {
+
+    const {currentUser} = useSelector(state => state.auth)
+
+    const img = currentUser.img
 
     
     return (
@@ -9,15 +15,17 @@ export default function Navbar() {
             <nav className="navbar">
                 <ul className="navbar__links">
                     <li className="navbar__item">
-                        <NotificationsNone fontSize='medium' className='navbar__icon' />
-                        <span className='navbar__icon-badge'>9</span>
-                    </li>
-                    <li className="navbar__item">
                         <Settings fontSize='medium' className='navbar__icon' />
                     </li>
-                    <li className="navbar__item">
-                        <img src='https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3560&q=80' alt='avatar' className='navbar__avatar' />
-                    </li>
+                    <Link to='/profile'>
+                        <li className="navbar__item">
+                            {
+                                img ?
+                                <img src={img} alt='avatar' className='navbar__avatar' /> :
+                                <AccountCircle sx={{width: '46px', height: '46px', color: 'rgb(86, 85, 85)'}}/>
+                            }
+                        </li>
+                    </Link>
                 </ul>
             </nav>
         </header>

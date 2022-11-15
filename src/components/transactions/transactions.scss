@@ -1,8 +1,16 @@
 .transactions {
     padding: 1em;
+    margin: 2em;
     -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
     box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
     border-radius: 10px;
+    width: 100%;
+    min-width: 1000px;
+
+    &-home {
+        margin: 0;
+        width: 100%;
+    }
 
     &__container {
         border: 0.5px solid rgba(128, 128, 128, 0.25);
@@ -21,6 +29,7 @@
         border-radius: 20px;
         width: fit-content;
         letter-spacing: 0.5px;
+        margin: 0 auto;
     }
 
     &__pending {
@@ -37,10 +46,17 @@
     &__product {
         display: flex;
         align-items: center;
+        justify-content: flex-start;
         gap: 10px;
     }
 
+    &__on-click {
+        cursor: pointer;
+    }
+
     &__image {
-        width: 30px;
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
     }
 }
